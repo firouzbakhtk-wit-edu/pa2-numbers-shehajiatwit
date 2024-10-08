@@ -6,13 +6,13 @@ public class PA2a {
 
 
     public static void main(String[] args) {
-    	
- 
+   
         int sumPos = 0; 
         int sumNeg = 0;
         int countPos = 0;
         int countNeg = 0;
         int totalSum = 0;
+        
         Scanner input = new Scanner(System.in);
         System.out.printf("Enter five whole numbers: ");
 
@@ -69,5 +69,6 @@ public class PA2a {
         }
 
         System.out.printf("The average of the 5 numbers: %.2f\n", averageAll);
+        input.close();
     }
 }
