@@ -1,12 +1,20 @@
 package edu.wit.cs.comp1000;
-
 import java.util.Scanner;
 
+/**
+ * Solutions to pa2a assigment.
+ * When it runs it gets output of 5 numbers and get sum or averages of both positive and negative
+ * @author Ilgert Shehaj
+ */
 public class PA2a {
-
+	
+	/**
+	 * Starts the program, asks for output
+	 * @param args command-line arguments, ignored
+	 */
 
     public static void main(String[] args) {
-   
+    	//initialized variables 
         int sumPos = 0; 
         int sumNeg = 0;
         int countPos = 0;
@@ -15,10 +23,11 @@ public class PA2a {
         
         Scanner input = new Scanner(System.in);
         System.out.printf("Enter five whole numbers: ");
-
+        //for loop to get 5 numbers and add to totalSum
         for (int i = 0; i < 5; i++) {
             int userInput = input.nextInt();
             totalSum += userInput;
+            //both if statements increase the count
             if (userInput > 0) {
                 sumPos += userInput;
                 countPos++;
@@ -27,7 +36,7 @@ public class PA2a {
                 countNeg++;
             }
         }
-
+        //check averages for 0 to avoid integer division
         double posAverage = 0.0;
         if (countPos > 0) {
             posAverage = (double) sumPos / countPos;
@@ -41,12 +50,13 @@ public class PA2a {
         double averageAll = (double) totalSum / 5;
 
         // Output results
+        //if the count of pos is 1 then output should be one number instead of numbers 
         if (countPos == 1) {
             System.out.printf("The sum of the %d positive number: %d\n", countPos, sumPos);
         } else {
             System.out.printf("The sum of the %d positive numbers: %d\n", countPos, sumPos);
         }
-
+        //if the count of neg is 1 then output should be one number instead of numbers
         if (countNeg == 1) {
             System.out.printf("The sum of the %d non-positive number: %d\n", countNeg, sumNeg);
         } else {
@@ -56,6 +66,7 @@ public class PA2a {
         System.out.printf("The sum of the 5 numbers: %d\n", totalSum);
 
         // Averages
+        //same procedure from the counts 
         if (countPos == 1) {
             System.out.printf("The average of the %d positive number: %.2f\n", countPos, posAverage);
         } else {
