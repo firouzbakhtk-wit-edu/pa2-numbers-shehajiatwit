@@ -3,16 +3,19 @@ package edu.wit.cs.comp1000;
 import java.util.Scanner;
 
 public class PA2a {
-    public static int sumPos = 0; 
-    public static int sumNeg = 0;
-    public static int countPos = 0;
-    public static int countNeg = 0;
-    public static int totalSum = 0;
+
 
     public static void main(String[] args) {
+    	
+ 
+        int sumPos = 0; 
+        int sumNeg = 0;
+        int countPos = 0;
+        int countNeg = 0;
+        int totalSum = 0;
         Scanner input = new Scanner(System.in);
         System.out.printf("Enter five whole numbers: ");
-        
+
         for (int i = 0; i < 5; i++) {
             int userInput = input.nextInt();
             totalSum += userInput;
